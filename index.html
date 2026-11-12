@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -25,17 +25,162 @@
         <h1 class="brand-title">Schay Doceria</h1>
     </header>
 
+    <!-- FUNDO ESCURO AO ABRIR O MENU -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <aside class="side-menu" id="side-menu">
+
+        <div class="side-menu-header">
+
+            <span class="brand-title">Categorias</span>
+
+            <button class="close-menu-btn" id="close-menu-btn" aria-label="Fechar menu"></button>
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </div>
+
+        <ul class="side-menu-list">
+            <li><a href="cardapio" class="category-link" data-category="novidades">Novidades</a></li>
+            <li><a href="cardapio" class="category-link" data-category="bolos">Bolos</a></li>
+            <li><a href="cardapio" class="category-link" data-category="doces">Doces</a></li>
+            <li><a href="cardapio" class="category-link" data-category="kit-festa">Kit Festa</a></li>
+            <li><a href="cardapio" class="category-link" data-category="festa-na-caixa">Festa na Caixa</a></li>
+            <li><a href="cardapio" class="category-link" data-category="mais-pedidos">+ Pedidos</a></li>
+        </ul>
+
+    </aside>
+
     <main class="app-content">
+
+        <!-- SEÇÃO INÍCIO -->
         <section id="inicio" class="tab-content active">
 
-            <h2>Boas-vindas!</h2>
+            <!-- CARROSSEL -->
+            <div class="carousel-container">
 
-            <p>Os doces mais especiais feito com carinho para você.</p>
+                <div class="carousel-track" id="carousel-track">
 
-            <div class="banner-placeholder">
-                <span>Destaque do Dia</span>
+                    <div class="carousel-slide">
+
+                        <img src="/Imagens/bolo_andar01.jpg" alt="Bolo01">
+
+                        <div class="slide-caption">
+                            <span>Novidade</span>
+                            <h3>Bolos Artesanais</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-slide">
+
+                        <img src="/Imagens/bolo_comum01.jpg" alt="bolo">
+
+                        <div class="slide-caption">
+                            <span>Para Eventos</span>
+                            <h3>Doces & Kit Festa</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-slide">
+
+                        <img src="Imagens/logomarca.jpg" alt="doces">
+
+                        <div class="slide-caption">
+                            <span>Presenteie</span>
+                            <h3>Festa na Caixa</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BOLINHAS INDICADORES DO CARROSSEL -->
+                <div class="carousel-dots" id="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+
             </div>
 
+            <!-- DESTAQUE DO DIA -->
+            <div class="daily-highlight">
+                <div class="highlight-badge">
+                    <i class="fa-solid fa-star"></i>Destaque do Dia
+                </div>
+
+                <div class="highlight-card">
+
+                    <img src="/Imagens/bolo_andar01.jpg" alt="mais bolo">
+                    
+                    <div class="highlight-info">
+
+                        <h4>NOME DA DESCRIÇÃO DO DESTAQUE DO DIA</h4>
+
+                        <p>DESCRIÇÃO DA COMIDA</p>
+                        
+                        <div class="highlight-footer">
+
+                            <span class="price">valor da comida</span>
+
+                            <button type="button" class="btn-small" onclick="document.querySelector('.nav-item[href=\'#cardapio\']').click()">Ver no Menu"></button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- QUEM SOMOS -->
+            <div class="about-section">
+
+                <span class="section-tag">Nossa História</span>
+
+                <h3>Quem Somos</h3>
+
+                <p>Na <strong>Schay Doceria</strong>, cada receita é preparada artesanalmente com ingredientes
+                selecionados para transformar momentos simples em memórias inesquecíveis.</p>
+
+            </div>
+
+            <!-- AVALIAÇÕES -->
+            <div class="reviews-section">
+                <span class="section-tag">Depoimentos</span>
+                <h3>O que dizem nossos clientes</h3>
+
+                <div class="reviews-list">
+                    <div class="review-card">
+
+                        <div class="review-stars">
+                           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+
+                        <strong>xxxxxxxxxxxxxxxxxxxx</strong>
+
+                    </div>
+                    
+                    <div class="review-card">
+
+                        <div class="review-stars">
+                           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+
+                        <strong>xxxxxxxxxxxxxxxxxxxx</strong>
+
+                    </div>
+                    
+                </div>              
+
+            </div>
+        
         </section>
 
         <section id="buscar" class="tab-content">
@@ -62,14 +207,100 @@
 
         </section>
 
-        <section>
-            <>
+        <section id="contato" class="tab-content">
+            <div class="contact-header">
+
+                <span class="subtitle">Atendimento</span>
+
+                <h2>Fale conosco</h2>
+
+                <p>Tire suas dúvidas, faça orçamentos personalizados ou venha bater um papo sobre o seu pedido.</p>
+
+            </div>
+
+            <a href="https://wa.me/5579999999999" target="_blank" class="whatsapp-btn">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>Atendimento via WhatsApp</span>
+
+            </a>
+
+            <div class="divider">
+
+                <span>ou envie uma mensagem</span>
+
+            </div>
+
+            <!-- FORMULÁRIO DE CONTATO -->
+            <form class="contact-form" id="form-contato">
+
+                <div class="input-group">
+
+                    <label for="nome">Nome completo</label>
+
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="telefone">Telefone / WhatsApp</label>
+
+                    <input type="tel" id="telefone" placeholder="(79) 99999-9999" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="mensagem">Mensagem ou Pedido</label>
+
+                    <textarea id="mensagem" rows="4" placeholder="Conte-nos o que você precisa..." required></textarea>
+
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+
+            </form>
+            
+            <!-- INFORMAÇÕES ADICIONAIS -->
+            <div class="contact-info">
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <div>
+                        <strong>Horário de Atendimento</strong>
+                        <p>Terça a domingo: 10h às 18h (conferir dias)</p>
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <strong>Localização</strong>
+                        <p>Aracaju - SE (endereço)</p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
     <!-- BARRA DE NAVEGAÇÃO INFERIOR FIXA -->
     <nav class="bottom-nav">
+
+        <button type="button" class="nav-item" id="open-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+            <span>Menu</span>
+        </button>
 
         <a href="#inicio" class="nav-item active">
             <i class="fa-solid fa-house"></i>
